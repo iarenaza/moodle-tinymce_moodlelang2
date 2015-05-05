@@ -30,3 +30,5 @@ $plugin->version   = 2015042200;
 $plugin->requires  = 2013111800;
 // Full name of the plugin (used for diagnostics).
 $plugin->component = 'tinymce_moodlelang2';
+$plugin->release   = '1.0';
+$plugin->maturity  = MATURITY_STABLE;
