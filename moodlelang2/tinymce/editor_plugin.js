@@ -34,11 +34,11 @@
         _highlight_css : '',
         _already_highlighted : 0,
 
-        _span_multilang_begin : '<span class="multilang-begin mceNonEditable" data-mce-contenteditable="false" lang="%lang" xml:lang="%lang">{multilang %lang}</span>',
-        _span_multilang_end : '<span class="multilang-end mceNonEditable" data-mce-contenteditable="false">{multilang}</span>',
+        _span_multilang_begin : '<span class="multilang-begin mceNonEditable" data-mce-contenteditable="false" lang="%lang" xml:lang="%lang">{mlang %lang}</span>',
+        _span_multilang_end : '<span class="multilang-end mceNonEditable" data-mce-contenteditable="false">{mlang}</span>',
 
         /**
-         * Convert {multilang xx} and {multilang} strings to spans, so we can style them visually.
+         * Convert {mlang xx} and {mlang} strings to spans, so we can style them visually.
          * Remove superflous whitespace while at it.
          */
         _add_visual_styling : function(ed, content) {
@@ -53,17 +53,17 @@
             // Work around for Chrome behaviour: apparently we can't do the .replace() on the
             // _span_multilang_begin property, so we use a temporary variable instead.
             var begin_str = ed.plugins.moodlelang2._span_multilang_begin;
-            content = content.replace(new RegExp('{\\s*multilang\\s+([^}]+?)\\s*}', 'ig'), function(match, p1) {
+            content = content.replace(new RegExp('{\\s*mlang\\s+([^}]+?)\\s*}', 'ig'), function(match, p1) {
                 return begin_str.replace(new RegExp('%lang', 'g'), p1);
             });
-            content = content.replace(new RegExp('{\\s*multilang\\s*}', 'ig'), ed.plugins.moodlelang2._span_multilang_end);
+            content = content.replace(new RegExp('{\\s*mlang\\s*}', 'ig'), ed.plugins.moodlelang2._span_multilang_end);
 
             ed.plugins.moodlelang2._already_highlighted = 1;
             return content;
         },
 
         /**
-         * Remove the spans we added in _add_visual_styling() to leave only the {multilang xx} and {multilang} tags.
+         * Remove the spans we added in _add_visual_styling() to leave only the {mlang xx} and {mlang} tags.
          * Also make sure we lowercase the multilang 'tags'
          */
         _remove_visual_styling : function(ed) {
@@ -168,7 +168,7 @@
                                     var begin_str = ed.plugins.moodlelang2._span_multilang_begin;
                                     newtext = begin_str.replace(new RegExp('%lang', 'g'), v) + text + ed.plugins.moodlelang2._span_multilang_end;
                                 } else {
-                                    newtext = '{multilang ' + v +'}' + text + '{multilang}';
+                                    newtext = '{mlang ' + v +'}' + text + '{mlang}';
                                 }
                                 ed.selection.setContent(newtext);
                             }

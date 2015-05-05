@@ -39,7 +39,7 @@ Si desea mostrar el idioma para los bloque multi-idioma, puede usar algo como lo
 </pre>
 ";
 $string['highlight'] = 'Destacar los delimitadores';
-$string['highlight_desc'] = 'Destacar visualmente los delimitadores del contenido multi-idioma (esto es, {multilang XX} y {multilang}) en el editor WYSIWYG';
+$string['highlight_desc'] = 'Destacar visualmente los delimitadores del contenido multi-idioma (esto es, {mlang XX} y {mlang}) en el editor WYSIWYG';
 $string['pluginname'] = 'Contenido Multi-Idioma (v2)';
 $string['requiremultilang2'] = 'Requerir el filtro de Contenido Multi-Idioma (v2)';
 $string['requiremultilang2_desc'] = 'Si se habilita, el menú desplegable de selección de idiomas solo es visible cuando esté habilitado el filtro de Contenido Multi-Idioma (v2).';

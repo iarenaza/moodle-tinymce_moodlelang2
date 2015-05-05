@@ -39,7 +39,7 @@ If you want to display the language for the multilang blocks, you can use someth
 </pre>
 ";
 $string['highlight'] = 'Highlight delimiters';
-$string['highlight_desc'] = 'Visually highlight the multi-language content delimiters (i.e., {multilang XX} and {multilang}) in the WYSIWYG editor';
+$string['highlight_desc'] = 'Visually highlight the multi-language content delimiters (i.e., {mlang XX} and {mlang}) in the WYSIWYG editor';
 $string['pluginname'] = 'Multi-Language Content (v2)';
 $string['requiremultilang2'] = 'Require Multi-Language Content (v2) filter';
 $string['requiremultilang2_desc'] = 'If enabled, the language drop down menu is visible only when the Multi-Language Content (v2) filter is enabled.';
