@@ -43,6 +43,8 @@ $string['highlight_desc'] = 'Destacar visualmente los delimitadores del contenid
 $string['pluginname'] = 'Contenido Multi-Idioma (v2)';
 $string['requiremultilang2'] = 'Requerir el filtro de Contenido Multi-Idioma (v2)';
 $string['requiremultilang2_desc'] = 'Si se habilita, el menú desplegable de selección de idiomas solo es visible cuando esté habilitado el filtro de Contenido Multi-Idioma (v2).';
+$string['showalllangs'] = 'Mostrar todos los idiomas';
+$string['showalllangs_desc'] = 'Si se habilita, el menú desplegable de selección de idiomas contendrá todos los idiomas soportados por Moodle. En caso contrario, sólo se mostrarán los idiomas instalados y habilitados';
 
 /* All lang strings used from TinyMCE JavaScript code must be named 'pluginname:stringname', no need to create langs/en_dlg.js */
 $string['moodlelang2:desc'] = 'Ayuda a añadir contenido multi-idioma (necesita tener habilitado el filtro de Contenido Multi-Idioma (v2))';

@@ -29,8 +29,10 @@ require(dirname(__FILE__) . '/default-css.php');
 if ($ADMIN->fulltree) {
     $settings->add(new admin_setting_configcheckbox('tinymce_moodlelang2/requiremultilang2',
         get_string('requiremultilang2', 'tinymce_moodlelang2'), get_string('requiremultilang2_desc', 'tinymce_moodlelang2'), 1));
+    $settings->add(new admin_setting_configcheckbox('tinymce_moodlelang2/showalllangs',
+        get_string('showalllangs', 'tinymce_moodlelang2'), get_string('showalllangs_desc', 'tinymce_moodlelang2'), 0));
     $settings->add(new admin_setting_configcheckbox('tinymce_moodlelang2/highlight',
         get_string('highlight', 'tinymce_moodlelang2'), get_string('highlight_desc', 'tinymce_moodlelang2'), 0));
     $settings->add(new admin_setting_configtextarea('tinymce_moodlelang2/highlight_css',
-    get_string('highlightcss', 'tinymce_moodlelang2'), get_string('highlightcss_desc', 'tinymce_moodlelang2'), $moodlelang2_default_css, PARAM_RAW));
+        get_string('highlightcss', 'tinymce_moodlelang2'), get_string('highlightcss_desc', 'tinymce_moodlelang2'), $moodlelang2_default_css, PARAM_RAW));
 }

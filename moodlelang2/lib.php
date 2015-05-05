@@ -47,7 +47,12 @@ class tinymce_moodlelang2 extends editor_tinymce_plugin {
         }
 
         // We need to pass the list of languages to tinymce.
-        $langs = get_string_manager()->get_list_of_languages();
+        if ($this->get_config('showalllangs')) {
+            $langs = get_string_manager()->get_list_of_languages();
+        } else {
+            $langs = get_string_manager()->get_list_of_translations();
+        }
+
         asort($langs);
         $params['moodlelang2_langs'] = json_encode($langs);
 
