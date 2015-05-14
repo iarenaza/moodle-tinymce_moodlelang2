@@ -60,7 +60,7 @@ class tinymce_moodlelang2 extends editor_tinymce_plugin {
             $params['moodlelang2_highlight'] = json_encode($highlight);
         }
 
-        require_once(dirname(__FILE__) .'/default-css.php');
+        require(dirname(__FILE__) .'/default-css.php');
         if ($highlight_css = $this->get_config('highlight_css', $moodlelang2_default_css)) {
             $params['moodlelang2_css'] = json_encode($highlight_css);
         }
