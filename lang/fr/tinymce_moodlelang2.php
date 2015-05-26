@@ -49,5 +49,5 @@ $string['showalllangs_desc'] = 'Si activé, le menu déroulant des langues conti
 /* All lang strings used from TinyMCE JavaScript code must be named 'pluginname:stringname', no need to create langs/en_dlg.js */
 $string['moodlelang2:desc'] = 'Aide à ajouter du contenu multilingue (le filtre Contenu multilingue (v2) doit être activé)';
 $string['moodlelang2:language'] = 'Langue';
-$string['moodlelang2:viewlanguagemenu'] = 'Voir le menu déroulant des langues à l'éditeur TinyMCE';
+$string['moodlelang2:viewlanguagemenu'] = 'Voir le menu déroulant des langues à l\'éditeur TinyMCE';
 
