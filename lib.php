@@ -27,8 +27,7 @@ class tinymce_moodlelang2 extends editor_tinymce_plugin {
     /** @var array list of buttons defined by this plugin */
     protected $buttons = array('moodlelang2');
 
-    protected function update_init_params(array &$params, context $context,
-            array $options = null) {
+    protected function update_init_params(array &$params, context $context, array $options = null) {
 
         if ($this->get_config('requiremultilang2', 1)) {
             // If multi-language content filter (v2) is disabled, do not add drop down menu.
@@ -36,6 +35,10 @@ class tinymce_moodlelang2 extends editor_tinymce_plugin {
             if (!array_key_exists('multilang2', $filters)) {
                 return;
             }
+        }
+
+        if (!has_capability('tinymce/moodlelang2:viewlanguagemenu', $context)) {
+            return;
         }
 
         if ($row = $this->find_button($params, 'formatselect')) {

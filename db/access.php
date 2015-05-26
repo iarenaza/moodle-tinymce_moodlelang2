@@ -14,8 +14,10 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+defined('MOODLE_INTERNAL') || die();
+
 /**
- * TinyMCE Multilingual content plugin version details.
+ * Plugin for Moodle 'Multilingual content' drop down menu.
  *
  * @package   tinymce_moodlelang2
  * @copyright 2015 onwards Iñaki Arenaza & Mondragon Unibertsitatea
@@ -24,11 +26,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-// The current plugin version (Date: YYYYMMDDXX).
-$plugin->version   = 2015052600;
-// Required Moodle version.
-$plugin->requires  = 2013111800;
-// Full name of the plugin (used for diagnostics).
-$plugin->component = 'tinymce_moodlelang2';
-$plugin->release   = '1.0';
-$plugin->maturity  = MATURITY_STABLE;
+$capabilities = array(
+
+    'tinymce/moodlelang2:viewlanguagemenu' => array(
+        'captype' => 'read',
+        'contextlevel' => CONTEXT_COURSE,
+        'archetypes' => array(
+            'user' => CAP_ALLOW,
+        ),
+    ),
+);

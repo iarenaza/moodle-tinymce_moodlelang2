@@ -49,3 +49,4 @@ $string['showalllangs_desc'] = 'If enabled, the language drop down menu will con
 /* All lang strings used from TinyMCE JavaScript code must be named 'pluginname:stringname', no need to create langs/en_dlg.js */
 $string['moodlelang2:desc'] = 'Helps adding multilingual content (you need the Multi-Language Content (v2) filter enabled)';
 $string['moodlelang2:language'] = 'Language';
+$string['moodlelang2:viewlanguagemenu'] = 'View language dropdown menu in TinyMCE editor';
